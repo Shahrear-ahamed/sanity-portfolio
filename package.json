@@ -9,22 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.1.13",
     "@portabletext/react": "^3.0.11",
     "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.18.1",
+    "framer-motion": "^10.16.4",
     "next": "14.0.0",
     "next-sanity": "^5.5.10",
     "react": "^18",
     "react-dom": "^18",
-    "@sanity/vision": "^3.18.1",
     "sanity": "^3.18.1",
     "styled-components": "^5.3.9"
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^3.0.1",
-    "@types/styled-components": "^5.1.26",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/styled-components": "^5.1.26",
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "14.0.0",
