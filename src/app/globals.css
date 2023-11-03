@@ -3,3 +3,18 @@
 @tailwind utilities;
 
 /* default color  */
+/* /  */
+/* navbar  */
+/* /  */
+
+header {
+  max-width: 1200px !important;
+  margin: 0 auto;
+  width: 90% !important;
+  padding: 0% !important;
+}
+
+.wrapper-container {
+  max-width: 1200px;
+  width: 90%;
+}
