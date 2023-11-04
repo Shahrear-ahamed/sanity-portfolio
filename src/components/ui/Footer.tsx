@@ -6,7 +6,7 @@ import SocialIcon from "./SocialIcon";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary bg-opacity-10 pt-24">
+    <footer className="bg-primary bg-opacity-10 pt-28">
       <div className="wrapper-container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 !my-5 gap-5 grid-rows-3 sm:grid-rows-2 md:grid-rows-1">
         <div className="flex flex-col items-center md:items-start">
           <Image
