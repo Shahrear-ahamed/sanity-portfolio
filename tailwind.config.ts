@@ -1,5 +1,5 @@
-import { nextui } from "@nextui-org/react";
 import type { Config } from "tailwindcss";
+import { nextui } from "@nextui-org/react";
 
 const config: Config = {
   content: [
@@ -14,6 +14,22 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      animation: {
+        float: "float 3s ease-in-out infinite",
+        wheel: "wheel 1.3s infinite",
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translate3d(0, 0, 0)" },
+          "50%": { transform: "translate3d(-10px, 15px, 20px)" },
+        },
+        wheel: {
+          to: {
+            opacity: "0",
+            top: "27px",
+          },
+        },
       },
     },
   },

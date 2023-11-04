@@ -36,7 +36,10 @@ export default function NavbarCom() {
       <NavbarContent className="hidden sm:flex gap-10" justify="center">
         {menuItems.map((item, index) => (
           <NavbarItem key={index}>
-            <Link color="foreground" href="#">
+            <Link
+              color="foreground"
+              href="#"
+              className="text-sm hover:text-primary duration-500">
               {item}
             </Link>
           </NavbarItem>
@@ -44,8 +47,10 @@ export default function NavbarCom() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden md:flex">
-          <button className="">
-            <span>Let&apos;s Talk</span>
+          <button className="cursor-pointer rounded-lg justify-center bg-transparent -skew-x-12 py-3 px-4 border-2 border-white group hover:border-primary duration-500">
+            <span className="text-sm skew-x-12 group-hover:text-primary duration-500">
+              Let&apos;s Talk
+            </span>
           </button>
         </NavbarItem>
       </NavbarContent>

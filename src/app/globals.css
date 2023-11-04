@@ -18,3 +18,10 @@ header {
   max-width: 1200px;
   width: 90%;
 }
+
+@media (max-width: 950px) {
+  .full_name::before {
+    content: "\a";
+    white-space: pre;
+  }
+}
