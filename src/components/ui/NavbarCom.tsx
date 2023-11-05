@@ -2,34 +2,38 @@
 
 import React from "react";
 import {
+  Link as UiLink,
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
-  Button,
   NavbarMenuToggle,
   NavbarMenuItem,
   NavbarMenu,
 } from "@nextui-org/react";
 import Image from "next/image";
 import logo from "../../../public/shahrear_logo.png";
+import Link from "next/link";
 
 export default function NavbarCom() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = ["Home", "About", "Project", "Blog"];
 
+  console.log(isMenuOpen);
+
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen} className="navbarParent">
       <NavbarContent>
         <NavbarBrand className="cursor-pointer">
-          <Image
-            src={logo}
-            width={120}
-            height={50}
-            alt="Shahrear ahamed logo"
-          />
+          <Link href="/">
+            <Image
+              src={logo}
+              width={120}
+              height={50}
+              alt="Shahrear ahamed logo"
+            />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -54,26 +58,18 @@ export default function NavbarCom() {
           </button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className={`!h-[30%] ${isMenuOpen ? "block" : "hidden"}`}>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              className="w-full text-base"
-              href="#"
-              size="lg">
+          <NavbarItem
+            key={`${item}-${index}`}
+            onClick={() => setIsMenuOpen(false)}>
+            <UiLink className="w-full text-sm text-white" href="#" size="lg">
               {item}
-            </Link>
-          </NavbarMenuItem>
+            </UiLink>
+          </NavbarItem>
         ))}
-        <NavbarItem className="flex">
-          <button className="">
+        <NavbarItem className="flex" onClick={() => setIsMenuOpen(false)}>
+          <button className="text-sm">
             <span>Let&apos;s Talk</span>
           </button>
         </NavbarItem>

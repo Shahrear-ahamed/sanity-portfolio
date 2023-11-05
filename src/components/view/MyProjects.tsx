@@ -1,12 +1,13 @@
-import React from "react";
 import SingleProject from "../ui/SingleProject";
+import SectionTitle from "../ui/SectionTitle";
 
 export default function MyProjects() {
   return (
     <section className="wrapper-container mx-auto my-10">
-      <h3 className="text-3xl my-5">
+      
+      <SectionTitle>
         My <span className="text-primary">Projects</span>
-      </h3>
+      </SectionTitle>
       <SingleProject />
     </section>
   );

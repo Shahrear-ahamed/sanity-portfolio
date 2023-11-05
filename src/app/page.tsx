@@ -1,3 +1,6 @@
+import Footer from "@/components/ui/Footer";
+import NavbarCom from "@/components/ui/NavbarCom";
+import AboutMe from "@/components/view/AboutMe";
 import ContactMe from "@/components/view/ContactMe";
 import Hero from "@/components/view/Hero";
 import MyBlogs from "@/components/view/MyBlogs";
@@ -6,12 +9,17 @@ import Specialized from "@/components/view/Specialized";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <Specialized />
-      <MyProjects />
-      <MyBlogs />
-      <ContactMe />
-    </main>
+    <>
+      <NavbarCom />
+      <main>
+        <Hero />
+        <AboutMe />
+        <Specialized />
+        <MyProjects />
+        <MyBlogs />
+        <ContactMe />
+      </main>
+      <Footer />
+    </>
   );
 }

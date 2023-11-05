@@ -4,10 +4,8 @@ import { IoCall } from "react-icons/io5";
 import EmailForm from "../ui/EmailForm";
 
 export default function ContactMe() {
-  
-
   return (
-    <section className="wrapper-container mx-auto bg-white text-background py-8 rounded-lg -mb-20 relative z-50">
+    <section className="wrapper-container mx-auto mt-20 bg-white text-background py-8 rounded-lg -mb-20 relative z-50">
       <div className="p-10 grid gap-10 grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2">
         <div className="">
           <h3 className="text-4xl mt-0 mb-5">

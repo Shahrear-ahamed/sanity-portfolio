@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function SingleBlog() {
   return (
     <Card className="max-w-[285px] w-full pb-5">
-      <CardBody className="overflow-visible py-2 p-0 [&>div]:!max-w-none [&>div]:!rounded-t-lg">
+      <CardBody className="overflow-visible py-2 p-0 [&>div]:!max-w-none [&>div]:!rounded-t-lg [&>div]:!rounded-b-none ">
         <Image
           alt="Card background"
           className="object-cover rounded-t-xl w-full"

@@ -6,10 +6,11 @@ import Link from "next/link";
 import SocialIcon from "../ui/SocialIcon";
 import ShowCase from "../ui/ShowCase";
 import Mouse from "../ui/Mouse";
+import { FaLaptopCode, FaTools } from "react-icons/fa";
 
 function Hero() {
   return (
-    <section className="wrapper-container mx-auto mt-20 mb-8 relative">
+    <section className="wrapper-container mx-auto mt-20 pb-10 relative">
       <div className="grid items-center gap-10 min-h-[650px] justify-items-center md:justify-items-end grid-cols-1 md:grid-cols-2">
         <div>
           <span className="text-sm">Hello </span>
@@ -53,9 +54,9 @@ function Hero() {
         {/* // image  */}
         <div className="relative">
           <ShowCase
-            text="1+"
-            title="Years Experience"
-            style="top-[30%] -left-5"
+            icon={<FaLaptopCode />}
+            title="Front-end"
+            style="top-[30%] left-5"
             anim_delay={{ animationDelay: "0.5s", animationDuration: "9s" }}
           />
           <Image
@@ -66,16 +67,16 @@ function Hero() {
           />
 
           <ShowCase
-            text="10+"
-            title="Projects Done"
+            icon={<FaTools />}
+            title="Back-end"
             style="right-0 top-[25%]"
             anim_delay={{ animationDelay: "1.5s", animationDuration: "10s" }}
           />
 
           <ShowCase
-            text="7+"
-            title="Happy Clients"
-            style="top-[50%] left-0 sm:top-[35%] sm:-left-[10px] md:top-[85%] md:left-[30%]"
+            text="2y+"
+            title="Coding Exp."
+            style="top-[70%] left-0 sm:top-[35%] sm:-left-[10px] md:top-[85%] md:left-[30%]"
             anim_delay={{ animationDelay: "1s", animationDuration: "8s" }}
           />
         </div>
