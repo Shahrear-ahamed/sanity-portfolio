@@ -38,7 +38,7 @@ export default function EmailForm() {
         <label
           className="flex text-sm pb-1 items-center justify-between ease-in-out duration-200 border-b-2 border-solid border-gray-500 focus-within:border-b-primary"
           htmlFor="name">
-          Name:
+          <span className="w-20">Name:</span>
           <input
             type="text"
             id="name"
@@ -54,7 +54,7 @@ export default function EmailForm() {
         <label
           className="flex text-sm pb-1 items-center justify-between ease-in-out duration-200 border-b-2 border-solid border-gray-500 focus-within:border-b-primary"
           htmlFor="email">
-          Email:
+          <span className="w-20">Email:</span>
           <input
             type="email"
             id="email"
@@ -70,7 +70,7 @@ export default function EmailForm() {
         <label
           className="flex text-sm pb-1 items-center justify-between ease-in-out duration-200 border-b-2 border-solid border-gray-500 focus-within:border-b-primary"
           htmlFor="subject">
-          Subject:
+          <span className="w-20">Subject:</span>
           <input
             type="text"
             id="Subject"
@@ -86,7 +86,7 @@ export default function EmailForm() {
         <label
           className="flex text-sm pb-1 justify-between ease-in-out duration-200 border-b-2 border-solid border-gray-500 focus-within:border-b-primary"
           htmlFor="message">
-          Message:
+          <span className="w-20">Message:</span>
           <textarea
             id="message"
             cols={30}

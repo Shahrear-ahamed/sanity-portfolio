@@ -20,6 +20,13 @@ export default defineType({
       },
     }),
     defineField({
+      name: "slogan",
+      title: "Project Slogan",
+      type: "string",
+      validation: (slogan) =>
+        slogan.required().max(50).warning("Shorter is better"),
+    }),
+    defineField({
       name: "author",
       title: "Author",
       type: "reference",
@@ -36,7 +43,7 @@ export default defineType({
     }),
     defineField({
       name: "frontendUrl",
-      title: "Front End URL",
+      title: "Front End Git URL",
       type: "url",
       validation: (Rule) =>
         Rule.uri({
@@ -45,7 +52,7 @@ export default defineType({
     }),
     defineField({
       name: "backendUrl",
-      title: "Back End URL",
+      title: "Back End Git URL",
       type: "url",
       validation: (Rule) =>
         Rule.uri({
@@ -65,7 +72,7 @@ export default defineType({
       name: "categories",
       title: "Project Categories",
       type: "array",
-      of: [{ type: "reference", to: { type: "project_category" } }],
+      of: [{ type: "reference", to: { type: "category" } }],
     }),
     defineField({
       name: "mainImage",
@@ -81,6 +88,14 @@ export default defineType({
           title: "Attribution",
         },
       ],
+    }),
+    defineField({
+      name: "siteIcon",
+      title: "Site Icon",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
     }),
     defineField({
       name: "projectImages",
@@ -123,6 +138,7 @@ export default defineType({
     select: {
       title: "title",
       author: "author.name",
+      media: "siteIcon",
     },
     prepare(selection) {
       const { author } = selection;

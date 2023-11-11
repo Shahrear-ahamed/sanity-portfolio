@@ -23,13 +23,13 @@ export default function SingleBlog({
 
   return (
     <Card
-      className={`max-w-[285px] w-full pb-5 bg-primary bg-opacity-10 ${
-        index === 3 && "md:hidden lg:inline-block"
+      className={`max-w-[285px] w-full pb-5 bg-primary bg-opacity-10 rounded-lg ${
+        index === 3 && "md:hidden lg:block"
       }`}>
-      <CardBody className="overflow-visible py-2 p-0 [&>div]:!max-w-none [&>div]:!rounded-t-lg [&>div]:!rounded-b-none [&>div>div]:!rounded-b-none">
+      <CardBody className="overflow-visible py-2 p-0 [&>div]:!max-w-none [&>div]:!rounded-t-lg [&>div]:!rounded-b-none [&>div>div]:!rounded-t-lg [&>div>div]:!rounded-b-none">
         <Image
           alt="Card background"
-          className="object-cover rounded-t-xl w-full "
+          className="object-cover rounded-t-lg w-full !rounded-b-none"
           isZoomed
           src={image?.src}
           width={270}
@@ -37,20 +37,18 @@ export default function SingleBlog({
       </CardBody>
       <CardFooter className="pb-0 pt-2 px-4 flex-col items-start h-full">
         <Link href={`/blogs/${blog.slug}`} className="h-14">
-          <Tooltip content={blog.title}>
+          <Tooltip content={blog.title} radius="none" className="rounded">
             <h4 className="font-bold text-large">{blog.title.slice(0, 40)}</h4>
           </Tooltip>
         </Link>
-        <small className="text-default-500">
-          By <strong>@{blog.name}</strong>
-        </small>
+        <small className="text-default-500 my-2">by @{blog.name}</small>
         <p className="my-2 text-sm">{blog.description}...</p>
         <Link href={`/blogs/${blog.slug}`}>
           <Button
             color="primary"
             variant="ghost"
-            radius="sm"
-            className="border-none hover:!bg-none hover:!text-white"
+            radius="none"
+            className="border-none rounded hover:!bg-none hover:!text-background"
             endContent={<FiArrowUpRight />}>
             Read more
           </Button>

@@ -3,7 +3,6 @@ import category from "./category";
 import blog from "./blog";
 import author from "./author";
 import project from "./project";
-import projectCategory from "./projectCategory";
 import tag from "./tag";
 
 export const schemaTypes = [
@@ -12,6 +11,5 @@ export const schemaTypes = [
   author,
   category,
   project,
-  projectCategory,
-  blockContent,
+  blockContent
 ];

@@ -32,7 +32,7 @@ export default function AboutMe() {
         Here you will find more information about me, and my current skills
         mostly in terms of programming and technology.
       </p>
-      <div className="grid gap-5 grid-cols-1 md:grid-cols-2 mt-10">
+      <div className="grid gap-10 grid-cols-1 md:grid-cols-2 mt-10">
         <div>
           <h4 className="text-2xl mb-5">Get to know me!</h4>
           <div className="space-y-5">
