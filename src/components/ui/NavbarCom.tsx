@@ -20,8 +20,6 @@ export default function NavbarCom() {
 
   const menuItems = ["Home", "About", "Project", "Blog"];
 
-  console.log(isMenuOpen);
-
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen} className="navbarParent">
       <NavbarContent>

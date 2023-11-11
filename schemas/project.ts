@@ -53,10 +53,34 @@ export default defineType({
         }),
     }),
     defineField({
+      name: "showcaseUrl",
+      title: "Showcase URL",
+      type: "url",
+      validation: (Rule) =>
+        Rule.uri({
+          scheme: ["http", "https"],
+        }),
+    }),
+    defineField({
       name: "categories",
       title: "Project Categories",
       type: "array",
       of: [{ type: "reference", to: { type: "project_category" } }],
+    }),
+    defineField({
+      name: "mainImage",
+      title: "Main image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
     }),
     defineField({
       name: "projectImages",
@@ -69,11 +93,6 @@ export default defineType({
           title: "Gallery Image",
           options: { hotspot: true },
           fields: [
-            {
-              name: "caption",
-              type: "string",
-              title: "Caption",
-            },
             {
               name: "attribution",
               type: "string",

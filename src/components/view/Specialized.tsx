@@ -24,7 +24,7 @@ const specializedData = [
 
 export default function Specialized() {
   return (
-    <section className="wrapper-container mx-auto my-20 min-h-[60vh] h-full flex flex-col justify-center">
+    <section className="wrapper-container mx-auto my-20 min-h-[60vh] h-full flex flex-col justify-center cursor-pointer antialiased">
       <SectionTitle>
         I am <span className="text-primary">Specialized</span> in
       </SectionTitle>
@@ -32,7 +32,7 @@ export default function Specialized() {
         {specializedData.map((data, index) => (
           <div
             key={index}
-            className="border-2 border-white rounded-lg p-6 -skew-x-[4deg] group hover:border-primary hover:bg-primary hover:shadow-md hover:shadow-primary duration-400 cursor-default">
+            className="border-2 border-white rounded-lg p-6 -skew-x-[4deg] group hover:border-primary hover:bg-primary hover:shadow-md hover:shadow-primary duration-400">
             <div className="skew-x-[4deg]">
               <span className="w-[50px] h-[50px] flex items-center justify-center border-primary bg-primary group-hover:bg-background border-2 rounded-full [&>svg]:text-3xl [&>svg]:text-background group-hover:[&>svg]:text-white duration-400 [&>svg]:duration-400">
                 {data.icon}
@@ -40,7 +40,7 @@ export default function Specialized() {
               <h4 className="text-xl md:text-2xl my-5 group-hover:text-background duration-400">
                 {data.title}
               </h4>
-              <p className="text-sm group-hover:text-background duration-400">
+              <p className="text-sm group-hover:text-background duration-400 antialiased">
                 {data.body}
               </p>
             </div>

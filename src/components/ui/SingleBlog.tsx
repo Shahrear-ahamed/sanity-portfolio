@@ -1,31 +1,51 @@
 import React from "react";
-import { Card, CardBody, Image, CardFooter, Button } from "@nextui-org/react";
+import {
+  Card,
+  CardBody,
+  Image,
+  CardFooter,
+  Button,
+  Tooltip,
+} from "@nextui-org/react";
 import { FiArrowUpRight } from "react-icons/fi";
 import Link from "next/link";
+import { Blog } from "../../../typings";
+import NextSanityImage from "@/lib/sanityImage";
 
-export default function SingleBlog() {
+export default function SingleBlog({
+  blog,
+  index,
+}: {
+  blog: Blog;
+  index: number;
+}) {
+  const image = NextSanityImage(blog?.mainImage);
+
   return (
-    <Card className="max-w-[285px] w-full pb-5">
-      <CardBody className="overflow-visible py-2 p-0 [&>div]:!max-w-none [&>div]:!rounded-t-lg [&>div]:!rounded-b-none ">
+    <Card
+      className={`max-w-[285px] w-full pb-5 bg-primary bg-opacity-10 ${
+        index === 3 && "md:hidden lg:inline-block"
+      }`}>
+      <CardBody className="overflow-visible py-2 p-0 [&>div]:!max-w-none [&>div]:!rounded-t-lg [&>div]:!rounded-b-none [&>div>div]:!rounded-b-none">
         <Image
           alt="Card background"
-          className="object-cover rounded-t-xl w-full"
-          src="https://nextui.org/images/hero-card-complete.jpeg"
+          className="object-cover rounded-t-xl w-full "
+          isZoomed
+          src={image?.src}
           width={270}
         />
       </CardBody>
-      <CardFooter className="pb-0 pt-2 px-4 flex-col items-start">
-        <Link href="/blogs/frontend-radio">
-          <h4 className="font-bold text-large">Frontend Radio</h4>
+      <CardFooter className="pb-0 pt-2 px-4 flex-col items-start h-full">
+        <Link href={`/blogs/${blog.slug}`} className="h-14">
+          <Tooltip content={blog.title}>
+            <h4 className="font-bold text-large">{blog.title.slice(0, 40)}</h4>
+          </Tooltip>
         </Link>
         <small className="text-default-500">
-          By <strong>@Shahrear</strong>
+          By <strong>@{blog.name}</strong>
         </small>
-        <p className="my-2 text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quae
-          nesciunt dicta facere alias amet nihil fugiat ipsam adipisci ab?
-        </p>
-        <Link href="/blogs/frontend-radio">
+        <p className="my-2 text-sm">{blog.description}...</p>
+        <Link href={`/blogs/${blog.slug}`}>
           <Button
             color="primary"
             variant="ghost"

@@ -7,7 +7,7 @@ import MyBlogs from "@/components/view/MyBlogs";
 import MyProjects from "@/components/view/MyProjects";
 import Specialized from "@/components/view/Specialized";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <NavbarCom />

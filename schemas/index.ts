@@ -1,12 +1,14 @@
 import blockContent from "./blockContent";
 import category from "./category";
-import post from "./post";
+import blog from "./blog";
 import author from "./author";
 import project from "./project";
 import projectCategory from "./projectCategory";
+import tag from "./tag";
 
 export const schemaTypes = [
-  post,
+  blog,
+  tag,
   author,
   category,
   project,
