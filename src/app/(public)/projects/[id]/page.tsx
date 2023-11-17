@@ -1,6 +1,6 @@
 import { WarningBannerOther } from "@/components/ui/WarningBanner";
 
-export default function SingleProjectPage() {
+export default function BlogPostPage() {
   return (
     <div>
       <WarningBannerOther />

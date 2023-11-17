@@ -7,7 +7,7 @@ import {Studio} from './Studio'
 export const metadata: Metadata = {
   ...studioMetadata,
   // Overrides the viewport to resize behavior
-  viewport: `${studioMetadata.viewport}, interactive-widget=resizes-content`,
+  // viewport: `${studioMetadata?.viewport}, interactive-widget=resizes-content`,
 }
 
 export default function StudioPage() {
