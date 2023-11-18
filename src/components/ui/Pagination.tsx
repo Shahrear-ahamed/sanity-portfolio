@@ -21,7 +21,7 @@ export default function PaginationCom({
       showControls
       total={total}
       initialPage={1}
-      className="[&>ul]:!bg-primary [&>ul]:!bg-opacity-10 [&>ul]:!rounded [&>ul>li]:!bg-transparent [&>ul>span]:!rounded [&>ul>span]:!text-background"
+      className="[&>ul]:!bg-primary [&>ul]:!bg-opacity-10 [&>ul]:!rounded [&>ul>li]:!bg-transparent [&>ul>span]:!rounded [&>ul>span]:!text-background mt-5"
     />
   );
 }
