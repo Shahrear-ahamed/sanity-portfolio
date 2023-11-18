@@ -29,6 +29,7 @@
   "devDependencies": {
     "@sanity/client": "^6.8.0",
     "@sanity/eslint-config-studio": "^3.0.1",
+    "@types/luxon": "^3.3.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -36,6 +37,7 @@
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "14.0.0",
+    "luxon": "^3.4.4",
     "next-sanity-image": "^6.1.0",
     "postcss": "^8",
     "react-icons": "^4.11.0",

@@ -23,23 +23,18 @@ export default function SingleProject({
       <Image
         removeWrapper
         alt="Card example background"
-        className="z-0 w-full h-full object-cover group-hover:bg-overlay-100 duration-400 project-main-image"
+        className="z-0 w-full h-full object-cover group-hover:bg-overlay-100 duration-400 project-main-image !rounded-md"
         src={mainViewImage?.src}
       />
-      <CardFooter className="absolute bg-primary/5 -bottom-20 z-10 opacity-0 border-t-1 border-background dark:border-default-100 group-hover:bottom-0 duration-400 group-hover:opacity-100 !rounded-b-md">
-        <div className="flex flex-grow gap-2 items-center">
-          <Image
-            alt={project.slogan}
-            className="rounded-full w-11 h-11 border border-background"
-            src={siteIconImage?.src}
-          />
-          <div className="flex flex-col">
-            <p className="text-tiny text-white/60">{project.slogan}</p>
-          </div>
-        </div>
+      <CardFooter className="absolute bg-primary/5 -bottom-20 z-10 opacity-0 border-t-1 border-background dark:border-default-100 group-hover:bottom-0 duration-400 group-hover:opacity-100 !rounded-b-md flex justify-between">
+        <Image
+          alt={project.slogan}
+          className="rounded-full w-11 h-11 border border-background"
+          src={siteIconImage?.src}
+        />
         <Link
           href={`/projects/${project.slug}`}
-          className="rounded-full px-3 py-2 text-sm text-white bg-background">
+          className="rounded-full px-3 py-2 text-xs text-white bg-background">
           View Project
         </Link>
       </CardFooter>

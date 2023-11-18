@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Card,
-  CardBody,
-  Image,
-  CardFooter,
-  Tooltip,
-} from "@nextui-org/react";
+import { Card, CardBody, Image, CardFooter, Tooltip } from "@nextui-org/react";
 import { FiArrowUpRight } from "react-icons/fi";
 import Link from "next/link";
 import { Blog } from "../../../typings";
@@ -28,7 +22,7 @@ export default function SingleBlog({
       <CardBody className="overflow-visible py-2 p-0 [&>div]:!max-w-none [&>div]:!rounded-t-lg [&>div]:!rounded-b-none [&>div>div]:!rounded-t-lg [&>div>div]:!rounded-b-none">
         <Image
           alt="Card background"
-          className="object-cover rounded-t-lg w-full !rounded-b-none"
+          className="object-cover rounded-t-lg w-full !rounded-b-none min-h-[250px]"
           isZoomed
           src={image?.src}
           width={270}

@@ -36,8 +36,8 @@ export default function AllProjectsSingleProject({
           {/* <p className="my-2 text-sm">{project.description}...</p> */}
         </div>
         <Link
-          href={`/blogs/${project.slug}`}
-          className="border border-primary rounded hover:!bg-primary duration-300 hover:!text-background px-4 py-2 flex items-center text-sm">
+          href={`/projects/${project.slug}`}
+          className="border border-primary rounded hover:!bg-primary duration-300 hover:!text-background px-4 py-2 flex items-center text-xs">
           Read more
           <FiArrowUpRight className="ml-2" />
         </Link>

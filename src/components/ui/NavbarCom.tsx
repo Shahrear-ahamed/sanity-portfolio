@@ -21,7 +21,7 @@ export default function NavbarCom() {
   const menuItems = ["Home", "About", "Project", "Blog"];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="navbarParent">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="navbarParent z-[100]">
       <NavbarContent>
         <NavbarBrand className="cursor-pointer">
           <Link href="/">
