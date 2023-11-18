@@ -46,7 +46,7 @@ export default function BlogsPage() {
           </>
         ) : blogs.length && !loading ? (
           blogs.map((blog: Blog, idx: number) => (
-            <AllBlogsSingleBlog key={blog.title} blog={blog} index={idx} />
+            <AllBlogsSingleBlog key={blog.title} blog={blog} />
           ))
         ) : (
           <p className="text-center text-2xl text-primary">No Blogs Found</p>

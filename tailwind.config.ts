@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      objectPosition: {
+        "center-top": "center top",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

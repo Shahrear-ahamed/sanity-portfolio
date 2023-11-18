@@ -23,7 +23,7 @@ export default function SingleProject({
       <Image
         removeWrapper
         alt="Card example background"
-        className="z-0 w-full h-full scale-125 -translate-y-6 object-cover group-hover:bg-overlay-100 duration-400 project-main-image"
+        className="z-0 w-full h-full object-cover group-hover:bg-overlay-100 duration-400 project-main-image"
         src={mainViewImage?.src}
       />
       <CardFooter className="absolute bg-primary/5 -bottom-20 z-10 opacity-0 border-t-1 border-background dark:border-default-100 group-hover:bottom-0 duration-400 group-hover:opacity-100 !rounded-b-md">
@@ -37,10 +37,10 @@ export default function SingleProject({
             <p className="text-tiny text-white/60">{project.slogan}</p>
           </div>
         </div>
-        <Link href={`/projects/${project.slug}`}>
-          <Button radius="full" size="sm">
-            View Project
-          </Button>
+        <Link
+          href={`/projects/${project.slug}`}
+          className="rounded-full px-3 py-2 text-sm text-white bg-background">
+          View Project
         </Link>
       </CardFooter>
     </Card>

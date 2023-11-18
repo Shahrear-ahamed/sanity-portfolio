@@ -31,7 +31,6 @@ header {
 }
 
 .project-card .project-main-image {
-  margin-top: 60px !important;
   object-position: top center !important;
   transition: all 5s ease-in-out !important;
 }

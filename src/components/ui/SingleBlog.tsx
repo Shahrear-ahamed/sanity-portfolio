@@ -4,7 +4,6 @@ import {
   CardBody,
   Image,
   CardFooter,
-  Button,
   Tooltip,
 } from "@nextui-org/react";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -43,15 +42,11 @@ export default function SingleBlog({
         </Tooltip>
         <small className="text-default-500 my-2">by @{blog.name}</small>
         <p className="my-2 text-sm">{blog.description}...</p>
-        <Link href={`/blogs/${blog.slug}`}>
-          <Button
-            color="primary"
-            variant="ghost"
-            radius="none"
-            className="border-none rounded hover:!bg-none hover:!text-background"
-            endContent={<FiArrowUpRight />}>
-            Read more
-          </Button>
+        <Link
+          href={`/blogs/${blog.slug}`}
+          className="border border-primary rounded hover:!bg-primary duration-300 hover:!text-background px-4 py-2 flex items-center text-sm">
+          Read more
+          <FiArrowUpRight className="ml-2" />
         </Link>
       </CardFooter>
     </Card>

@@ -38,18 +38,21 @@ interface Author extends Base {
 
 interface Project extends Base {
   title: string;
+  slogan: string;
   slug: Slug;
-  author: Author;
+  metaDescription: string;
   liveSiteUrl: string;
   frontendUrl: string;
   backendUrl: string;
   showcaseUrl: string;
-  categories: ProjectCategory[];
-  body: Block[];
-  metaDescription: string;
   publishedAt: string;
+  body: Block[];
+  name: string;
+  author: Author;
+  siteIcon: Image;
   mainImage: Image;
   projectImages: Image;
+  categories: ProjectCategory[];
 }
 
 interface ProjectCategory extends Base {

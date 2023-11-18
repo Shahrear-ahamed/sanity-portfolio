@@ -27,6 +27,4 @@ export default async function MyBlogs() {
 const blogsClient = async () => {
   return await client.fetch(`*[_type == "blog"] | order(_createdAt desc)[0 .. 3] {title, "slug":slug.current, description, mainImage, publishedAt, "name": author->name, "authorImage": author->image, author,tag, "tag":tag->title, "tag_slug":tag->slug}
   `);
-  // return await client.fetch(`*[_type == "blog"] | order(_createdAt desc)[0 .. 3] {title, "slug":slug.current, description, mainImage, publishedAt, "name": author->name, "authorImage": author->image, author,tag, "tag":tag->title, "tag_slug":tag->slug}
-  // `);
 };
