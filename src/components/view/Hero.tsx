@@ -10,7 +10,7 @@ import { FaLaptopCode, FaTools } from "react-icons/fa";
 
 function Hero() {
   return (
-    <section className="wrapper-container mx-auto mt-20 pb-10 relative">
+    <section id="home" className="wrapper-container mx-auto mt-20 pb-10 relative">
       <div className="grid items-center gap-10 min-h-[650px] justify-items-center md:justify-items-end grid-cols-1 md:grid-cols-2">
         <div>
           <span className="text-sm">Hello </span>

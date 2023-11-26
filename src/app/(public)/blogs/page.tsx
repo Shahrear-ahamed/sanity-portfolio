@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Blog } from "../../../../typings";
 import AllBlogsSingleBlog from "@/components/ui/AllBlogsSingleBlog";
 import { Pagination } from "@nextui-org/react";
-import LoadingSkeleton from "@/components/ui/LoadingSkeleton";
+import { LoadingSkeleton } from "@/components/ui/LoadingSkeleton";
 
 export default function BlogsPage() {
   const [limit, setLimit] = useState(10);

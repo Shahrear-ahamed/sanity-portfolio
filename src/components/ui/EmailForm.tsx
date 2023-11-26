@@ -24,12 +24,12 @@ export default function EmailForm() {
     });
 
     if (!response.ok) {
-      toast.error("Message failed to send");
+      toast.error("Message failed to send", { duration: 3000 });
       return;
     }
 
     reset();
-    toast.success(`Hey ${data.name}, i got your mail 📬`);
+    toast.success(`Hey ${data.name}, i got your mail 📬`, { duration: 3000 });
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">

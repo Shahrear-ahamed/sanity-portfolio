@@ -8,7 +8,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <NextUIProvider>
       {children}
-      <Toaster position="bottom-right" reverseOrder={false} />
+      <Toaster position="bottom-right" reverseOrder={false}/>
     </NextUIProvider>
   );
 }

@@ -5,8 +5,8 @@ import { allProjectsPage, totalProjectCount } from "@/lib/Groq";
 import { useEffect, useState } from "react";
 import { Project } from "../../../../typings";
 import { Pagination } from "@nextui-org/react";
-import LoadingSkeleton from "@/components/ui/LoadingSkeleton";
 import AllProjectsSingleProject from "@/components/ui/AllProjectsSingleProject";
+import { LoadingSkeleton } from "@/components/ui/LoadingSkeleton";
 
 export default function BlogsPage() {
   const [limit, setLimit] = useState(10);

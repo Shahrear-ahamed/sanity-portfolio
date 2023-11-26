@@ -33,6 +33,18 @@ export const allBlogsPage = async ({
   `);
 };
 
+
+export const HomeBlogsClient = async () => {
+  return await client.fetch(`*[_type == "blog"] | order(_createdAt desc)[0 .. 3] {title, "slug":slug.current, description, mainImage, publishedAt, "name": author->name, "authorImage": author->image, author,tag, "tag":tag->title, "tag_slug":tag->slug}
+  `);
+};
+
+export const HomeProjectsData = async () => {
+  return await client.fetch(
+    `*[_type == "project"] | order(_createdAt asc)[0 .. 5] {title, "slug":slug.current, slogan, mainImage, siteIcon,}`
+  );
+};
+
 export const allProjectsPage = async ({
   limit = 10,
   page = 1,

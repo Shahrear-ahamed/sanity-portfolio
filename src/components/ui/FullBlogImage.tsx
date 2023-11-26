@@ -15,7 +15,7 @@ export default function FullBlogImage({
         isBlurred
         src={mainImage?.src}
         alt={title}
-        className="!rounded-md object-cover object-[center_top] !w-full max-h-[500px] !scale-100"
+        className="!rounded-md object-cover object-[center_top] !w-full max-h-[250px] sm:max-h-[400px] md:max-h-[500px] !scale-100"
       />
     </div>
   );

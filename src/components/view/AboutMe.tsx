@@ -24,7 +24,7 @@ const skills = [
 
 export default function AboutMe() {
   return (
-    <section className="wrapper-container mx-auto my-20 min-h-[60vh] h-full flex flex-col justify-center">
+    <section id="about" className="wrapper-container mx-auto my-20 min-h-[60vh] h-full flex flex-col justify-center">
       <SectionTitle>
         <span className="text-primary">About Me</span>
       </SectionTitle>
