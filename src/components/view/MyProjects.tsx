@@ -22,7 +22,7 @@ export default function MyProjects() {
   }, []);
 
   return (
-    <section className="wrapper-container mx-auto my-10">
+    <section id="project" className="wrapper-container mx-auto my-10">
       <SectionTitle>
         My <span className="text-primary">Projects</span>
       </SectionTitle>

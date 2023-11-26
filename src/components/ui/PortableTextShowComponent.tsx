@@ -32,7 +32,9 @@ export const PortableTextShowComponent = {
     h4: ({ children }: any) => (
       <h4 className="text-2xl py-4 font-bold">{children}</h4>
     ),
-    normal: ({ children }: any) => <p className="text-base py-2">{children}</p>,
+    normal: ({ children }: any) => (
+      <p className="text-sm md:text-base py-2">{children}</p>
+    ),
     blockqoute: ({ children }: any) => (
       <blockquote className="border-l-4 border-primary pl-5 py-5">
         {children}

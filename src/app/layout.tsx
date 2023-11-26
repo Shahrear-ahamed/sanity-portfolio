@@ -4,7 +4,40 @@ import { Providers } from "@/lib/Providers";
 
 export const metadata: Metadata = {
   title: "Shahrear Ahamed",
-  description: "I am a full stack web developer",
+  creator: "Shahrear Ahamed",
+  openGraph: {
+    images: ["../../public/hero_one.png"],
+  },
+  metadataBase: new URL("https://www.shahrear-ahamed.com"),
+  manifest: "https://www.shahrear-ahamed.com/manifest.json",
+  authors: [
+    { name: "Shahrear Ahamed", url: "https://www.shahrear-ahamed.com/" },
+  ],
+  description: "Hi i am Shahrear ahamed. I am a full stack web developer.",
+  keywords: [
+    "Next.js",
+    "React",
+    "JavaScript",
+    "TypeScript",
+    "TailwindCSS",
+    "Sanity",
+    "GraphQL",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "DigitalOcean",
+    "Vercel",
+    "Netlify",
+    "GitHub",
+    "Figma",
+    "Adobe XD",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+  ],
 };
 
 export default function RootLayout({
