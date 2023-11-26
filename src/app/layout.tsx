@@ -13,7 +13,8 @@ export const metadata: Metadata = {
   authors: [
     { name: "Shahrear Ahamed", url: "https://www.shahrear-ahamed.com/" },
   ],
-  description: "Hi i am Shahrear ahamed. I am a full stack web developer.",
+  description:
+    "Hi i am Shahrear ahamed. I am a full stack web developer. My Stack is MERN and PERN. I am a self taught developer. I love to learn new things.",
   keywords: [
     "Next.js",
     "React",

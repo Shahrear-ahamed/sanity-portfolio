@@ -24,7 +24,9 @@ const skills = [
 
 export default function AboutMe() {
   return (
-    <section id="about" className="wrapper-container mx-auto my-20 min-h-[60vh] h-full flex flex-col justify-center">
+    <section
+      id="about"
+      className="wrapper-container mx-auto my-20 min-h-[60vh] h-full flex flex-col justify-center">
       <SectionTitle>
         <span className="text-primary">About Me</span>
       </SectionTitle>
@@ -58,7 +60,7 @@ export default function AboutMe() {
               <span className="text-primary">video games</span> for mind
               refreshment, <span className="text-primary">Learning</span> new
               things, hanging out with my
-              <span className="text-primary">family or friends</span>.
+              <span className="text-primary"> family or friends</span>.
             </p>
           </div>
         </div>

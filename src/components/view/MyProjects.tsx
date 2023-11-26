@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { HomeProjectsData } from "@/lib/Groq";
 import { Project } from "../../../typings";
 import { HomeProjectsLoading } from "../ui/LoadingSkeleton";
+import Link from "next/link";
+import { FaChevronRight } from "react-icons/fa6";
 
 export default function MyProjects() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -23,9 +25,18 @@ export default function MyProjects() {
 
   return (
     <section id="project" className="wrapper-container mx-auto my-10">
-      <SectionTitle>
-        My <span className="text-primary">Projects</span>
-      </SectionTitle>
+      <div className="flex justify-between items-center">
+        <SectionTitle>
+          My <span className="text-primary">Projects</span>
+        </SectionTitle>
+        <div className="w-10 h-10">
+          <Link
+            href="/projects"
+            className="h-full w-full flex justify-center items-center relative cursor-pointer right-0 hover:-right-2 duration-400">
+            <FaChevronRight className="h-5 w-5" />
+          </Link>
+        </div>
+      </div>
 
       <div className="gap-5 grid grid-cols-12">
         {loading ? (

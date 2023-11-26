@@ -40,7 +40,7 @@ function Hero() {
               </span>
             </Link>
 
-            <Link className="text-sm ml-8 underline" href="/projects">
+            <Link className="text-sm ml-8 underline hover:text-primary duration-300" href="/projects">
               See Works
             </Link>
           </div>

@@ -61,7 +61,6 @@ export function HomeBlogsLoading({ className }: { className?: string }) {
 
 export function HomeProjectsLoading({ index }: { index: number }) {
   const idx = index - 1;
-  console.log(galleryStyle[idx].style)
   return (
     <Card
       className={`w-full h-[300px] space-y-5 ${galleryStyle[idx].style} !bg-primary/20 [&>div]:h-full [&>div]:!bg-primary/20`}

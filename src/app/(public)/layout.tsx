@@ -1,7 +1,5 @@
-import NavbarCom from "@/components/ui/NavbarCom";
+import NavbarOther from "@/components/ui/NavbarOther";
 import Footer from "@/components/ui/Footer";
-
-import React from "react";
 
 export default function RootLayout({
   children,
@@ -10,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <NavbarCom />
+      <NavbarOther />
       {children}
       <Footer />
     </>

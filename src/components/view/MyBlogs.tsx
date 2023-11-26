@@ -6,6 +6,8 @@ import SectionTitle from "../ui/SectionTitle";
 import { Blog } from "../../../typings";
 import { HomeBlogsClient } from "@/lib/Groq";
 import { HomeBlogsLoading } from "../ui/LoadingSkeleton";
+import { FaChevronRight } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function MyBlogs() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -22,9 +24,18 @@ export default function MyBlogs() {
   }, []);
   return (
     <section id="blog" className="wrapper-container mx-auto my-10">
-      <SectionTitle>
-        My <span className="text-primary">Blogs</span>
-      </SectionTitle>
+      <div className="flex justify-between items-center">
+        <SectionTitle>
+          My <span className="text-primary">Blogs</span>
+        </SectionTitle>
+        <div className="w-10 h-10">
+          <Link
+            href="/blogs"
+            className="h-full w-full flex justify-center items-center relative cursor-pointer right-0 hover:-right-2 duration-400">
+            <FaChevronRight className="h-5 w-5" />
+          </Link>
+        </div>
+      </div>
       <div className="grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-1 lg:grid-cols-4 gap-5">
         {loading ? (
           <>
