@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/lib/Providers";
 import GoogleAnalytics from "@/components/tools/GoogleAnalytics";
+import MSClarity from "@/components/tools/MSClarity";
 
 export const metadata: Metadata = {
   title: "Shahrear Ahamed",
@@ -52,6 +53,9 @@ export default function RootLayout({
       <body>
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
           <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
+        {process.env.NEXT_PUBLIC_MS_CLARITY ? (
+          <MSClarity msc_id={process.env.NEXT_PUBLIC_MS_CLARITY} />
         ) : null}
         <Providers>{children}</Providers>
       </body>
