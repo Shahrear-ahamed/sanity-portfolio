@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/lib/Providers";
+import GoogleAnalytics from "@/components/tools/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "Shahrear Ahamed",
@@ -49,6 +50,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body>
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
         <Providers>{children}</Providers>
       </body>
     </html>
